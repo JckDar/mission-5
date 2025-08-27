@@ -4,7 +4,7 @@ import LabelEpisode from "./labelEpisode"
 const FilmBaru = () => {
     return (
     <div className="w-screen md:min-h-96 pl-8 pr-8 mb-8 md:pl-16 md:pr-16 md:mb-16">
-        <h1 className="text-white text-2xl md:text-4xl mb-6 md:mb-8">Film Trending</h1>
+        <h1 className="text-white text-2xl md:text-4xl mb-6 md:mb-8">Film Baru Rilis</h1>
         <div className="flex flex-row max-w-screen h-72 md:h-80 gap-4 md:gap-7 pl-6 pr-6 md:pl-8 md:pr-8 m-auto overflow-y-hidden overflow-x-auto">
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl size-14 self-center -ml-8 z-20 shadow-2xl shadow-black hover:scale-110">
                 ◀︎
