@@ -3,14 +3,21 @@ import { Routes,Route } from "react-router"
 import HomePage from "./pages/homePages"
 import LoginPage from "./pages/login"
 import RegisterPage from "./pages/registerPage"
+import FilmPage from "./pages/filmPage"
+import WrapPage from "./pages/wrapPage"
 
 
 const App = () => {
   return (
     <Routes>
-      <Route path="homepage" element={<HomePage/>} />
+      <Route path='/' element={<WrapPage/>}>
+        <Route path="homepage" element={<HomePage/>}/>
+        <Route path="film" element={<FilmPage />}/>
+      </Route>
+
       <Route index element={<LoginPage/>} />
       <Route path='register' element={<RegisterPage/>} />
+
     </Routes>
   )
 }

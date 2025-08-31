@@ -1,10 +1,10 @@
-const Hero = () => {
+const Hero = ({film}) => {
     return (
         <div className="content-end bg-[url(../../../src/img/hero.jpg)] w-screen min-h-96 md:h-screen bg-cover bg-no-repeat mb-8">
           <div className="flex flex-col w-screen h-1/4 md:h-2/4">
           <div className="w-screen md:h-6/12 pr-8 pl-8 md:pr-16 md:pl-16 font-poppins">
             <h1 className="text-white text-2xl md:text-4xl font-medium">
-                Duty After School
+               {film ? 'Happines' : 'Duty After School'}
             </h1>
             <p className="max-w-xl text-white text-sm md:text-lg font-light mt-4 md:mt-10">
                 Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.
