@@ -1,34 +1,27 @@
 import { useRef } from "react"
+import lanjutFilm from "../../store/listLanjutFilm"
 const FilmContinue = () => {
   const containerRef = useRef(null)
   const scrollLeft = () => {
     containerRef.current.scrollby({ left: 200, behavior: "smooth" })
   }
+
   const scrollRight = () => {
     containerRef.current.scrollby({ left: -200, behavior: "smooth" })
   }
-
-  const filmList = [{
-    name: `Don't Look Up`,
-    image: '../../../src/img/film-page/dontlook.png',
-    star: '☆ 4.5/5'
-  },{
-    name: `Blue Lock`,
-    image: '../../../src/img/film-page/bluelock.png',
-    star: '☆ 4.6/5'
-  }
-]
+  
+  const listLanjutFilm = lanjutFilm
 
     return (
         <div className="w-screen h-60 md:h-80 font-poppins pl-8 pr-8 md:pl-16 md:pr-16">
             <h1 className="text-2xl md:text-4xl text-white mb-6 md:mb-12">Melanjutkan Nonton</h1>
             <div ref={containerRef} 
-            className="flex flex-row gap-3 md:gap-4 max-w-screen md:h-48 overflow-x-auto overflow-y-hidden scroll-smooth" >
+            className="flex flex-row md:gap-4 max-w-screen md:h-48 overflow-x-auto overflow-y-hidden scroll-smooth" >
                 <button className="hidden md:block md:absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center -ml-8 z-20 shadow-2xl shadow-black hover:scale-110"
                 onClick={scrollLeft}>
                     ◀︎
                 </button>
-                {filmList.map((item, index) => (
+                {listLanjutFilm.map((item, index) => (
                     <div className="shrink-0 relative md:w-84 md:h-48 content-center justify-center"
                     key={index}>
                     <img src={item.image}
