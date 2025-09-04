@@ -1,25 +1,24 @@
 const filmPremium = [{
-    name: `Don't Look Up`,
+    name: `Little Mermaid`,
     image: '../../../src/img/film-page/filmPremium/littleMermaid.png',
-    star: '☆ 4.5/5'
   },{
-    name: `Blue Lock`,
+    name: `Duty After Schoolk`,
     image: '../../../src/img/film-page/filmPremium/dutyAfter.png',
     star: '☆ 4.6/5'
   },{
-    name: `The Batman`,
+    name: `Big Hero 6`,
     image: '../../../src/img/film-page/filmPremium/bigHero.png',
     star: '☆ 4.2/5'
   },{
-    name: `A Man Called Otto`,
+    name: `All Of Us`,
     image: '../../../src/img/film-page/filmPremium/allOfUs.png',
     star: '☆ 4.4/5'
   },{
-    name: `A Man Called Otto`,
+    name: `The Batman`,
     image: '../../../src/img/film-page/filmPremium/batman.png',
     star: '☆ 4.4/5'
   },{
-    name: `Don't Look Up`,
+    name: `Little Mermaid`,
     image: '../../../src/img/film-page/filmPremium/littleMermaid.png',
     star: '☆ 4.5/5'
   }
