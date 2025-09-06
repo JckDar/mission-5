@@ -1,4 +1,5 @@
 import topRating from "../../store/listTopRating"
+import LabelEpisode from "../labelEpisode"
 const TopRatingFilm = () => {
 
     const listTopRating = topRating
@@ -15,6 +16,8 @@ const TopRatingFilm = () => {
                   className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
                  <img src={item.image}
                   className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
+                {item.name === 'Suzume' && (<LabelEpisode/>) }
+                {item.name === 'All Of Us' && (<LabelEpisode/>) }
              </div>
             ))}
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center right-12 z-20 shadow-2xl shadow-black hover:scale-110">
