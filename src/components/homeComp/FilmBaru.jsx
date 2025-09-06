@@ -1,5 +1,5 @@
-import Top10 from "./top10"
-import LabelEpisode from "./labelEpisode"
+import Top10 from "../top10"
+import LabelEpisode from "../labelEpisode"
 
 const FilmBaru = () => {
     return (
@@ -12,22 +12,22 @@ const FilmBaru = () => {
             <div className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
                 <img src="../../../src/img/Rilis Baru/Component 1.png" 
                 className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                <Top10 />
+                <Top10/>
             </div>
             <div className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
                 <img src="../../../src/img/Rilis Baru/Component 2.png" 
                 className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                <LabelEpisode />
+                <LabelEpisode/>
             </div>
             <div className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
                 <img src="../../../src/img/Rilis Baru/Component 3.png" 
                 className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                <Top10 />
+                <Top10/>
             </div>
             <div className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
                 <img src="../../../src/img/Rilis Baru/Component 4.png" 
                 className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                <LabelEpisode />
+                <LabelEpisode/>
             </div>
             <div className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
                 <img src="../../../src/img/Rilis Baru/Component 5.png" 
@@ -36,7 +36,7 @@ const FilmBaru = () => {
             <div className="relative shrink-0  h-72 w-52 md:h-80 md:w-56">
                 <img src="../../../src/img/Rilis Baru/Component 1.png" 
                 className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                <Top10 />
+                <Top10/>
             </div>
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center right-12 z-20 shadow-2xl shadow-black hover:scale-110">
                 ▶︎
