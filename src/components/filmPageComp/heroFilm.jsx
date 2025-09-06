@@ -1,6 +1,6 @@
 const HeroFilm = () => {
     return (
-        <div className="content-end bg-[url(../../../src/img/film-page/bg-hero.png)] w-screen min-h-96 md:h-screen bg-cover bg-no-repeat mb-8">
+        <div className="content-end bg-[url(../../../src/img/filmPoster/bg-hero.png)] w-screen min-h-96 md:h-screen bg-cover bg-no-repeat mb-8">
           <div className="flex flex-col w-screen h-1/4 md:h-2/4">
           <div className="w-screen md:h-6/12 pr-8 pl-8 md:pr-16 md:pl-16 font-poppins">
             <h1 className="text-white text-2xl md:text-4xl font-medium">
