@@ -11,7 +11,7 @@ const NavBar = () => {
                     navigate('/homepage')
                 }}>CHILL</h1>
                 <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500">Series</span>
-                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500"
+                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500 hover:cursor-pointer"
                  onClick={()=>{
                     navigate('/film')
                  }}>
