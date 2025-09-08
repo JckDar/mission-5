@@ -1,11 +1,12 @@
-import { useState } from "react"
+import useModal from "../../store/useModal"
 import topRating from "../../store/listTopRating"
 import LabelEpisode from "../labelEpisode"
 import FilmModal from "../filmModal"
 const TopRatingFilm = () => {
 
     const listTopRating = topRating
-    const [isSelected,setIsSelected] = useState(false)
+    const isOpen = useModal((state)=> (state.isOpen))
+    const setIsOpen = useModal((state)=> (state.setIsOpen))
 
     return (
     <div className="w-screen md:min-h-96 pl-8 pr-8 mb-8 md:pl-16 md:pr-16 md:mb-16">
@@ -14,22 +15,22 @@ const TopRatingFilm = () => {
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl size-14 self-center -ml-8 z-20 shadow-2xl shadow-black hover:scale-110">
                 ◀︎
             </button>
-            {listTopRating.map((item,index) => (
+            {listTopRating.map((film,index) => (
                  <div key={index}
                   className="shrink-0 relative h-72 w-52 md:h-80 md:w-56"
                   onClick={() => (
-                    setIsSelected(true)
+                    setIsOpen(film)
                   )}>
-                 <img src={item.image}
+                 <img src={film.image}
                   className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                {item.name === 'Suzume' && (<LabelEpisode/>) }
-                {item.name === 'All Of Us' && (<LabelEpisode/>) }
-                {isSelected && <FilmModal/>}
+                {film.name === 'Suzume' && (<LabelEpisode/>) }
+                {film.name === 'All Of Us' && (<LabelEpisode/>) }
              </div>
             ))}
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center right-12 z-20 shadow-2xl shadow-black hover:scale-110">
                 ▶︎
             </button>
+            {isOpen && (<FilmModal/>)}
         </div>
     </div>
     )
