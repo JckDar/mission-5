@@ -22,7 +22,7 @@ const FilmModal = () => {
             </div>
             <div className="flex flex-col min-h-40">
                 <p className="text-gray-400 w-full mx-6 mt-6 md:mx-8 md:mt-8">{isOpen.year} {isOpen.duration}</p>
-                <article className="text-white mx-6 mt-1 mb-10 md:mx-8 md:mt-2 md:mb-12 text-xs md:text-lg md:font-light">
+                <article className="text-white mx-6 mt-1 mb-10 md:mx-8 md:mt-2 md:mb-12 text-xs md:text-md md:font-light">
                     {isOpen.desc}
                 </article>
             </div>

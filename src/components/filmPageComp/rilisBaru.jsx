@@ -1,10 +1,13 @@
 import filmRilis from "../../store/listFilmRilisBaru"
+import FilmModal from "../filmModal"
+import useModal from "../../store/useModal"
 import LabelEpisode from "../labelEpisode"
 import Top10 from "../top10"
 
 const FilmRilisBaru = () => {
-
     const listFilmRilis = filmRilis
+    const isOpen = useModal((state)=> (state.isOpen))
+    const setIsOpen = useModal((state)=> (state.setIsOpen))
 
     return (
     <div className="w-screen md:min-h-96 pl-8 pr-8 mb-8 md:pl-16 md:pr-16 md:mb-16">
@@ -13,19 +16,23 @@ const FilmRilisBaru = () => {
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl size-14 self-center -ml-8 z-20 shadow-2xl shadow-black hover:scale-110">
                 ◀︎
             </button>
-            {listFilmRilis.map((item,index) => (
+            {listFilmRilis.map((film,index) => (
                  <div key={index}
-                  className="shrink-0 relative h-72 w-52 md:h-80 md:w-56">
-                 <img src={item.image}
+                  className="shrink-0 relative h-72 w-52 md:h-80 md:w-56 hover:scale-95"
+                  onClick={()=>(
+                    setIsOpen(film)
+                    )}>
+                 <img src={film.image}
                   className="shrink-0 h-72 w-48 md:h-80 md:w-56"/>
-                  {item.name === 'Duty After School' && (<LabelEpisode/>) }
-                  {item.name === 'All Of Us' && (<LabelEpisode/>) }
-                  {item.name === 'Little Mermaid' && (<Top10/>) }
+                  {film.name === 'Duty After School' && (<LabelEpisode/>) }
+                  {film.name === 'All Of Us' && (<LabelEpisode/>) }
+                  {film.name === 'Little Mermaid' && (<Top10/>) }
              </div>
             ))}
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center right-12 z-20 shadow-2xl shadow-black hover:scale-110">
                 ▶︎
             </button>
+            {isOpen && <FilmModal/>}
         </div>
     </div>
     )
