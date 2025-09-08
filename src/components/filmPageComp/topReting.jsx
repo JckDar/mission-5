@@ -2,6 +2,7 @@ import useModal from "../../store/useModal"
 import topRating from "../../store/listTopRating"
 import LabelEpisode from "../labelEpisode"
 import FilmModal from "../filmModal"
+
 const TopRatingFilm = () => {
 
     const listTopRating = topRating
@@ -30,7 +31,7 @@ const TopRatingFilm = () => {
             <button className="hidden md:block absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center right-12 z-20 shadow-2xl shadow-black hover:scale-110">
                 ▶︎
             </button>
-            {isOpen && (<FilmModal/>)}
+            {isOpen && (<FilmModal />)}
         </div>
     </div>
     )
