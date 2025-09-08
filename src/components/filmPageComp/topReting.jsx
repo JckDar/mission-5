@@ -17,7 +17,7 @@ const TopRatingFilm = () => {
             </button>
             {listTopRating.map((film,index) => (
                  <div key={index}
-                  className="shrink-0 relative h-72 w-52 md:h-80 md:w-56"
+                  className="shrink-0 relative h-72 w-52 md:h-80 md:w-56 hover:scale-95"
                   onClick={() => (
                     setIsOpen(film)
                   )}>
