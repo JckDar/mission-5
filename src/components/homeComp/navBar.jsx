@@ -17,7 +17,12 @@ const NavBar = () => {
                  }}>
                     Film
                 </span>
-                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500">Daftar Saya</span>
+                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500"
+                onClick={() => (
+                    navigate('/daftarsaya')
+                )}>
+                    Daftar Saya
+                </span>
             </div>
             <div className="shrink-0 flex flex-row w-1/12 justify-evenly items-center p-1 md:p-2.5 font-poppins mr-4">
                 <img 
