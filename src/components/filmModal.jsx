@@ -1,9 +1,11 @@
 import useModal from "../store/useModal"
 import usedaftarsaya from "../store/useDaftarSaya"
-const FilmModal = () => {
+
+const FilmModal = ({isAdded}) => {
     const isOpen = useModal((state) => (state.isOpen))
     const closeModal = useModal ((state)=> (state.closeModal))
-    const removeFilm = usedaftarsaya((state)=>(state.remo))
+    const removeFilm = usedaftarsaya((state)=>(state.removeFilm))
+    const listDaftarSaya = usedaftarsaya((state)=>(state.listDaftarSaya))
     const setListDaftarSaya = usedaftarsaya((state)=>(state.setListDaftarSaya))
     return (
 
@@ -18,13 +20,21 @@ const FilmModal = () => {
                     <button className="bg-blue-600 text-white text-md md:text-md px-4 py-1 md:px-8 md:py-2 rounded-4xl ml-8 mt-3 md:ml-14 md:mt-4 hover:bg-blue-800">
                         Mulai
                     </button>
-                    <button className="border-1 border-white rounded-full text-white text-md md:text-lg px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
+                   {!isAdded && <button className="border-1 border-white rounded-full text-white text-md md:text-lg px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
                     onClick={()=>{
                         setListDaftarSaya(isOpen)
                         closeModal()
                     }}>
                        +
-                    </button>
+                    </button>}
+                   {isAdded && <button className="border-1 border-white rounded-full text-white text-md md:text-lg px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
+                    onClick={()=>{
+                        removeFilm(isOpen.id)
+                        closeModal()
+                        console.log(isOpen)
+                    }}>
+                       -
+                    </button>}
                     
                 </div>
             </div>

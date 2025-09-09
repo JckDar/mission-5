@@ -5,19 +5,19 @@ const NavBar = () => {
 
     return (
         <nav className="flex flex-row w-screen h-14 justify-between bg-black/70 backdrop-blur-lg z-50 fixed">
-            <div className="flex flex-row md:w-1/3 justify-between items-center md:p-2.5 font-poppins">
-                <h1 className="text-3xl md:text-3xl font-monoton text-red-800 ml-3.5 md:ml-4 hover:cursor-pointer"
+            <div className="flex flex-row w:1/2 md:w-1/3 justify-between items-center md:p-2.5 font-poppins">
+                <h1 className="text-xl md:text-3xl font-monoton text-red-800 ml-3.5 md:ml-4 hover:cursor-pointer"
                 onClick={() => {
                     navigate('/homepage')
                 }}>CHILL</h1>
-                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500">Series</span>
-                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500 hover:cursor-pointer"
+                <span className="text-sm ml-2 md:flex md:text-md text-white font-light hover:text-red-500">Series</span>
+                <span className="text-sm ml-2 md:flex md:text-md text-white font-light hover:text-red-500 hover:cursor-pointer"
                  onClick={()=>{
                     navigate('/film')
                  }}>
                     Film
                 </span>
-                <span className="hidden md:flex md:text-md text-white font-light hover:text-red-500"
+                <span className="text-sm ml-2 md:flex md:text-md text-white font-light hover:text-red-500"
                 onClick={() => (
                     navigate('/daftarsaya')
                 )}>

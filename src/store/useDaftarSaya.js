@@ -1,19 +1,24 @@
-import { create } from "zustand";
+import { create } from "zustand"
+import { persist, createJSONStorage } from "zustand/middleware"
 
-const usedaftarsaya = (create(set => ({
+const usedaftarsaya = create(persist((set) => ({
     listDaftarSaya : [],
     setListDaftarSaya : (film)=>set((state) => (
         {listDaftarSaya: [film, ...state.listDaftarSaya]}
     )),
-    removeFilm : (name)=>set((state)=>{
+    removeFilm : (id)=>set((state)=>{
         const newList = [...state.listDaftarSaya]
-        newList.filter(film => film.name !== name)
-
+        newList.splice(id,1)
+        console.log(newList)
         return {
             listDaftarSaya : newList
         }
     })
 
-})))
+}),{
+    name: 'daftarFilmSaya',
+    storage: createJSONStorage(()=> (localStorage))
+    }
+))
 
 export default usedaftarsaya

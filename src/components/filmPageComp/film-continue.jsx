@@ -11,7 +11,7 @@ const FilmContinue = () => {
         <div className="w-screen h-60 md:h-80 font-poppins pl-8 pr-8 md:pl-16 md:pr-16">
             <h1 className="text-2xl md:text-4xl text-white mb-6 md:mb-12">Melanjutkan Nonton</h1>
             <div  
-            className="flex flex-row md:gap-4 max-w-screen md:h-48 overflow-x-auto overflow-y-hidden scroll-smooth" >
+            className="flex flex-row gap-3 md:gap-4 max-w-screen md:h-48 overflow-x-auto overflow-y-hidden scroll-smooth" >
                 <button className="hidden md:block md:absolute text-white bg-gray-700/90 border-1 border-white rounded-4xl text-2xl md:size-14 self-center -ml-8 z-20 shadow-2xl shadow-black hover:scale-110">
                     ◀︎
                 </button>
@@ -21,7 +21,7 @@ const FilmContinue = () => {
                     onClick={()=>(
                       setIsOpen(film)
                     )}>
-                    <img src={film.image}
+                    <img src={film.poster}
                      className=" shrink-0 w-76 h-40 m-auto md:mb-4 z-0 hover:scale-105" />
                      <h5 className="absolute w-76 md:w-84 text-left pl-4 md:pl-8 -mt-10 md:-mt-12 text-white font-light">
                        {film.name}
