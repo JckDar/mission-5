@@ -31,7 +31,7 @@ const FilmModal = ({isAdded}) => {
                     onClick={()=>{
                         removeFilm(isOpen.id)
                         closeModal()
-                        console.log(isOpen)
+                        console.log(isOpen.id)
                     }}>
                        -
                     </button>}

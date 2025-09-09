@@ -10,6 +10,7 @@ const usedaftarsaya = create(persist((set) => ({
         const newList = [...state.listDaftarSaya]
         newList.splice(id,1)
         console.log(newList)
+        console.log(id)
         return {
             listDaftarSaya : newList
         }
