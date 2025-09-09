@@ -2,12 +2,11 @@ import { create } from "zustand";
 
 const useModal = create((set) => ({
     isOpen : null,
-    id: null,
-    setIsOpen : (film,index)=>set({
-        isOpen:film, id:index
+    setIsOpen : (film)=>set({
+        isOpen:film 
     }),
     closeModal : ()=>set({
-        isOpen:null, id:null
+        isOpen:null
     })
 }))
 

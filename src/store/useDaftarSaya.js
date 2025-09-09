@@ -6,15 +6,9 @@ const usedaftarsaya = create(persist((set) => ({
     setListDaftarSaya : (film)=>set((state) => (
         {listDaftarSaya: [film, ...state.listDaftarSaya]}
     )),
-    removeFilm : (id)=>set((state)=>{
-        const newList = [...state.listDaftarSaya]
-        newList.splice(id,1)
-        console.log(newList)
-        console.log(id)
-        return {
-            listDaftarSaya : newList
-        }
-    })
+    removeFilm : (name)=>set((state)=>(
+        {listDaftarSaya : state.listDaftarSaya.filter((f)=> f.name !== name)}
+    ))
 
 }),{
     name: 'daftarFilmSaya',

@@ -27,13 +27,12 @@ const FilmModal = ({isAdded}) => {
                     }}>
                        +
                     </button>}
-                   {isAdded && <button className="border-1 border-white rounded-full text-white text-md md:text-lg px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
+                   {isAdded && <button className="border-1 border-white rounded-full text-white text-sm md:text-md px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
                     onClick={()=>{
-                        removeFilm(isOpen.id)
+                        removeFilm(isOpen.name)
                         closeModal()
-                        console.log(isOpen.id)
                     }}>
-                       -
+                       Remove
                     </button>}
                     
                 </div>
