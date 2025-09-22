@@ -16,7 +16,7 @@ const addData = async (name, image, poster, star, duration, year, desc) => {
     if(error) {
         console.log('error :', error)
     } else {
-        console.log(data)
+        alert('Film Berhasil Ditambah')
     }
 }
 

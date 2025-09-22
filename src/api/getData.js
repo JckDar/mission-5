@@ -7,11 +7,11 @@ import supabase from "../supabaseClient";
         .select('*')
 
         if (error) {
-            console.log('error :',error)
+            alert('error :',error)
             return[]
             
         } else {
-            console.log('berhasil :',data)
+           
             return data
         }
     }

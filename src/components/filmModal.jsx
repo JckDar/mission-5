@@ -1,13 +1,21 @@
 import useModal from "../store/useModal"
-import usedaftarsaya from "../store/useDaftarSaya"
 import addData from "../api/addData"
+import deleteData from "../api/deleteData"
+import usedaftarsaya from "../store/useDaftarSaya"
 
 const FilmModal = ({isAdded}) => {
     const isOpen = useModal((state) => (state.isOpen))
     const closeModal = useModal ((state)=> (state.closeModal))
-    const removeFilm = usedaftarsaya((state)=>(state.removeFilm))
-    const listDaftarSaya = usedaftarsaya((state)=>(state.listDaftarSaya))
-    const setListDaftarSaya = usedaftarsaya((state)=>(state.setListDaftarSaya))
+    const removeFilm = usedaftarsaya ((state)=>(state.removeFilm))
+    const handleDelete = async (name) => {
+        const success = await deleteData(name)
+        if(success) {
+            removeFilm(name)
+        }else {
+            alert('Gagal Menghapus Film')
+        }
+    }
+   
     return (
 
     <div className="fixed inset-0 bg-black/20 backdrop-blur-sm justify-center px-6 items-center flex z-50 font-poppins"
@@ -32,14 +40,13 @@ const FilmModal = ({isAdded}) => {
                             isOpen.year,
                             isOpen.desc,
                         )
-                        // setListDaftarSaya(isOpen)
                         closeModal()
                     }}>
                        +
                     </button>}
                    {isAdded && <button className="border-1 border-white rounded-full text-white text-sm md:text-md px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
                     onClick={()=>{
-                        removeFilm(isOpen.name)
+                       handleDelete(isOpen.name)
                         closeModal()
                     }}>
                        Remove
