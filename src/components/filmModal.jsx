@@ -1,5 +1,6 @@
 import useModal from "../store/useModal"
 import usedaftarsaya from "../store/useDaftarSaya"
+import addData from "../api/addData"
 
 const FilmModal = ({isAdded}) => {
     const isOpen = useModal((state) => (state.isOpen))
@@ -22,7 +23,16 @@ const FilmModal = ({isAdded}) => {
                     </button>
                    {!isAdded && <button className="border-1 border-white rounded-full text-white text-md md:text-lg px-4 md:px-4 py-1 md:py-2 ml-2 md:ml-4 hover:bg-gray-600/80"
                     onClick={()=>{
-                        setListDaftarSaya(isOpen)
+                        addData(
+                            isOpen.name,
+                            isOpen.image,
+                            isOpen.poster,
+                            isOpen.star,
+                            isOpen.duration,
+                            isOpen.year,
+                            isOpen.desc,
+                        )
+                        // setListDaftarSaya(isOpen)
                         closeModal()
                     }}>
                        +

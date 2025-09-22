@@ -1,8 +1,7 @@
-import { Link } from "react-router"
-import { useNavigate } from "react-router"
+import { Link, useNavigate } from "react-router"
 const RegisterForm = () => {
 
-  const navigate = useNavigate()
+  const navigate =  useNavigate()
 
     return(
 
@@ -10,14 +9,14 @@ const RegisterForm = () => {
      <form className="flex flex-col w-xl  text-nowrap  ">
         <label
            className="text-white mb-2 text-xs md:text-lg">
-              Username :
+            Username :
         </label>
         <input 
           className="block border-1 border-white rounded-4xl w-full h-4 md:h-8 p-4
-          mb-3 md:mb-6 text-white text-xs md:text-lg" type="text" placeholder="Masukkan Username" />
+          mb-3 md:mb-6 text-white text-xs md:text-lg" type="text" placeholder="Masukkan Username"/>
         <label
           className="text-white mb-2 text-xs md:text-lg">
-              Password :
+           Password :
         </label>
         <input className="block border-1 border-white rounded-4xl w-full h-4 md:h-8 p-4
           mb-3 md:mb-6 text-white text-xs md:text-lg" type="password" placeholder="Masukkan Password" />
@@ -27,7 +26,7 @@ const RegisterForm = () => {
         </label>
         <input 
           className="block border-1 border-white rounded-4xl w-full h-4 md:h-8 p-4
-          mb-3 md:mb-6 text-white text-xs md:text-lg" type="password" placeholder="Masukkan Ulang Password" />
+          mb-3 md:mb-6 text-white text-xs md:text-lg" type="password" placeholder="Masukkan Ulang Password"/>
         <p className="text-xs md:text-sm p-2 mb-5 md:mb-8 text-gray-400">
           Sudah mempunyai akun ?
             <Link to='/' className="text-white hover:text-red-900 text-xs md:text-sm">
@@ -38,7 +37,7 @@ const RegisterForm = () => {
           className="w-full h-8 md:h-10 rounded-4xl text-xs md:text-sm bg-gray-500 text-white m-auto
         hover:bg-gray-800 shadow shadow-black/5 "
           onClick={() => {
-            navigate("/homepage")
+            navigate('/homepage')
           }}>
             Daftar
         </button>

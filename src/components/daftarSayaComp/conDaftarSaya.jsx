@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import usedaftarsaya from "../../store/useDaftarSaya"
 import useModal from "../../store/useModal"
 import FilmModal from "../filmModal"
@@ -7,6 +8,8 @@ const ConDaftarSaya = () => {
     const listDaftarSaya = usedaftarsaya((state)=>(state.listDaftarSaya))
     const isOpen = useModal((state)=> (state.isOpen))
     const setIsOpen = useModal((state)=> (state.setIsOpen))
+
+   
     return(
         <div className="w-full flex flex-row flex-wrap gap-x-2 md:gap-x-4 gap-y-8 px-auto py-8 md:px-8 md:py-12 justify-center items-center">
           {listDaftarSaya.map((film,index) => (
